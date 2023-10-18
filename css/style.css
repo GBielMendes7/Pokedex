@@ -131,3 +131,20 @@ main {
     box-shadow: inset -4px 4px 0 #222;
     font-size: 0.9rem;
 }
+
+
+/*Lista*/
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+  
+.card {
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+}
+
