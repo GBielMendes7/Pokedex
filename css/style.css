@@ -27,9 +27,9 @@ main {
 
 .pokemon_image{
     position: absolute;
-    bottom: 55%;
+    bottom: 60%;
     left: 50%;
-    transform: translate(-63%,20%);
+    transform: translate(-63%,10%);
     height: 18%;
 }
 
@@ -37,12 +37,48 @@ main {
     position: absolute;
     font-weight: 600;
     color: #aaa;
-    top:54.4%;
+    top:44.4%;
     right: 27%;
     font-size: clamp(10px,5vw,25px);
 }
 
-.pokemon_number{}
+.tipos{
+    position: absolute;
+    bottom: 42%;
+    left: 18%;
+    padding: 5px;
+}
+.pokemon_type{
+    padding: 5px;
+    border-radius: 5px;
+    font-size: clamp(10px,5vw,1rem);
+    font-weight: 600;
+
+}
+.pokemon_type2{
+    padding: 5px;
+    border-radius: 5px;
+    font-size: clamp(10px,5vw,1rem);
+}
+.prim_apa{
+    position: absolute;
+    bottom: 38%;
+    left: 19%;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: clamp(10px,5vw,1rem);
+    display: flex;
+}
+.prim_apa span{
+    margin-left: 5px;
+    font-weight: 600;
+}
+.pokemonteste{
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+}
 
 .pokemon_nome{
     color: #3a444d;
@@ -52,7 +88,7 @@ main {
 .form{
     position: absolute;
     width: 65%;
-    top:65%;
+    top:71%;
     left: 13.5%;
 }
 
