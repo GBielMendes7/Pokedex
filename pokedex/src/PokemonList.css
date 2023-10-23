@@ -4,11 +4,26 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Oxanium', cursive;
 }
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: linear-gradient(89deg, rgba(0,0,0,1) 24%, rgba(88,68,11,1) 49%, rgba(12,25,58,1) 76%);
+}
+
+.titulo{
+    display: flex;
+    background-color: #c90101;
+    padding: 20px;
+    align-items: center;
+    color: #fff;
+}
+.icone{
+    width: 50px;
+    padding: 5px;
+    margin-right: 8px;
 }
 
 .container{
@@ -33,7 +48,6 @@ body{
     padding: 5px;
     margin: 10px;
     border-radius: 5px;
-    background-color: #fff;
     box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
     display: flex;
     justify-content: center;
@@ -68,6 +82,7 @@ body{
 .geracao{
     background-color: #fff;
     border-radius: 5px;
+    border: 2px solid #222;
     box-shadow: inset -4px 4px 0 #222;
     font-size: 0.9rem;
     padding: 5px;
@@ -85,6 +100,7 @@ body{
     }
     .card{
         width: 100%;
+        margin: 10px;
     }
 
 

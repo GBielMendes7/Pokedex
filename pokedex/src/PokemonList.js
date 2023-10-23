@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './PokemonList.css';
+import cenario from './imagem/cenario.jpg';
+import icone from './imagem/icone.png'
 
 const colors = {
   fire: '#FDDFDF',
@@ -26,7 +28,6 @@ function PokemonList() {
       const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=386');
       const data = await response.json();
 
-      // Agora, para cada Pokémon, buscamos seus dados individuais
       const promises = data.results.map((pokemon) => fetch(pokemon.url).then((res) => res.json()));
       const allPokemonData = await Promise.all(promises);
 
@@ -43,20 +44,23 @@ function PokemonList() {
       return 'Geração 2';
     } else if (id <= 386) {
       return 'Geração 3';
-    } // Continue para as outras gerações
+    } 
   };
 
   return (
     <div>
+      <div className='titulo'>
+      <img src={icone} alt='icone' className='icone'/>
+        <h1>Pokedex</h1>
+      </div>
       <div className='container'>
       {pokemonData.map((pokemon) => (
         <div className='card'>
           <div key={pokemon.id}>
             <h2>{pokemon.id}-{pokemon.name}</h2>
-            <div className='teste'>
-            <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+            <div className='teste' style={{backgroundImage: `url(${cenario})`, backgroundSize:'cover'}}>
+              <img src={pokemon.sprites.front_default} alt={pokemon.name} />
             </div>
-
             <div className="tipos">
             <p className="pokemon_type" style={{ backgroundColor: colors[pokemon.types[0].type.name] }}>
               {pokemon.types[0].type.name}
